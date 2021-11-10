@@ -1,4 +1,4 @@
-# Fundamentals of Intelligent Systems in Vision
+# Computer Vision
 
 * ## Image Basic
 * ## 3D Image
