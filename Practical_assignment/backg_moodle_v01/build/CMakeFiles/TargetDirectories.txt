@@ -1,0 +1,4 @@
+/home/i82carij/3º/FSIV_en/Practical_assignment/backg_moodle_v01/build/CMakeFiles/edit_cache.dir
+/home/i82carij/3º/FSIV_en/Practical_assignment/backg_moodle_v01/build/CMakeFiles/vsegbase.dir
+/home/i82carij/3º/FSIV_en/Practical_assignment/backg_moodle_v01/build/CMakeFiles/rebuild_cache.dir
+/home/i82carij/3º/FSIV_en/Practical_assignment/backg_moodle_v01/build/CMakeFiles/vseg.dir
