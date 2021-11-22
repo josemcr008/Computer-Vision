@@ -211,3 +211,68 @@ From binary classfiers to multiclass:
 		* f1(x): C1 vs C2
 		* f1(x): C1 vs C3
 		* f1(x): C2 vs C3
+
+		# Sesion 6
+
+### Boosting
+
+    |		*				 
+    |      _ _ _ _ _                          
+    |   *  |x  x  x |
+    |    * | x  x x |    *
+    |      |        |
+    |_____________________________		(each line is a different classifier)
+
+Using different clasffiers to make one strong classifier. Define to binary problems. 
+
+ Example: Viola & Jones face detector
+
+### Decision Trees
+
+    |						 
+    |                |    *  *                       
+    |	  x  x  x|
+    | t2   	-------- |- - - - ----             
+    |	   * *   |	x x x
+    |_____________________________
+			t1
+
+x>T1?  -> no / y>T2 -> no -> class B / -> yes -> class A
+
+#### Random forest
+Many small decision trees on randomly sleected dimensions. Final output -> majority voting
+
+| tree |  | | 
+|--|--|--|--|
+| 1 | x |*|x|
+| 2| x | *|
+| 3| x|x
+|result|x|*
+
+
+## Trends on Feature Learning
+
+### Deep Learning
+Neural Networks with a lot of layers thar are conected with a lot of parameters.
+
+    0-->0-->0-->0-->0-->0
+    0-->0-->0-->0-->0-->0
+    0-->0-->0-->0-->0-->0
+    0-->0-->0-->0-->0-->0
+    0-->0-->0-->0-->0-->0	Every layer should be connected with every of the following col.
+Layers of the inside are called hidden layers.
+
+### CNN
+* Deep, feed-forward network with convolutional layers. Filters are learnt automatically form images/videos.
+Max pool: compute the maximun of the window. We use this to reduce the size of the image.
+
+LeNet (diapositiva: A simple CNN)
+
+### Aplications
+* Content generation
+* Automatic image generation
+* Video synthesis
+* Lip Reading Sentences
+* Image captioning
+* Medical image analysis
+* Autonomus cars
