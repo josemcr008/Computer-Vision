@@ -276,3 +276,55 @@ LeNet (diapositiva: A simple CNN)
 * Image captioning
 * Medical image analysis
 * Autonomus cars
+
+
+# Sesion 7
+
+### Categoritzation
+Choos e a category from a set: "The **wat**, but **NOT** the **where**"
+
+### Detection/Localisation
+Define the image region of the objects of interest: "The **what** and the **where**"
+
+### Semanctic segmenentation
+Assign one label to each pixel of the image
+
+## Categorization
+
+#### Why is difficult?
+* Intra-class variability. We can have a lot of differents chairs (for example).
+* Inter-class variability: Different classes that shares some caracteristics. (a horse and a zebra)
+* Camera viewpoint
+* Illumination
+* Oclussion: some parts of the objects are not visible.
+* Clutter: many objects in the foreground.
+* Deformation: objects changing their position (a human can move their arms)
+
+## Convolutional Neural Networks
+ Deep. feed-forward network with convolutional layers. Filsters are learn automatically from images/videos.
+
+## Layers
+
+### Convolution
+2D Convolutional layer:
+* Filter size : e.g 3x3
+* Number of filters
+* Stride: how many pixels you move to one side.
+* Padding: valid, same
+* Activation: ReLU. once we have the convolution done., the output is called feature map or activation map as well. Activation function:
+	* ReLU: if we have a negative value, we change to 0, the positive stays equal.  
+	* sigmoid: the min value is 0 and max is 1.
+
+### Dense
+A.k.a Fully- connected layer
+Parameters:
+* Number of units
+* Activation
+
+### The output
+Dense layer with softmax activation. As many units as categories.
+
+    Output layer			 Softmax activation function						Probabilites
+    [1.3]																			[0.02]
+    [5.1]			-->												--> 			[0.90]
+    [2.2]																			[0.05]
