@@ -328,3 +328,53 @@ Dense layer with softmax activation. As many units as categories.
     [1.3]																			[0.02]
     [5.1]			-->												--> 			[0.90]
     [2.2]																			[0.05]
+
+# Sesion 8
+
+## Sequential model
+Combine the pieces. Tips:
+* Several Conv2D+MaxPool2D bocks, incremental numbers of filters.
+* Some FC layers decreasing their size.
+* Final FC layers with softmax
+Labels: one-hot vector encoding. Relation between output layer and this encoding
+One-hot vector -> means only one postion of the vector is 1 and the other are 0.
+The output we will recieve is not perfect, for example we obtain (0,1,0,0,0,1). We want to optimize that.
+
+Model has to be compiled. To be set:
+* loss: image -> output  -> target. We want to minimize the loss function as much as posible. Loss is how good is our output comparing to the target.
+* optimizer: 
+* metrics: accuracy 
+
+
+# Sesion 9
+
+## Training
+
+### Data batch
+A lot of images with a specific width and height. Batch size is an hyperparameter
+
+Epoch: training period where the model sees (almost) all training samples. Hyperparameter.
+Usually we shuffle data between epochs.
+
+We can make a graphic using the accuracy and the loss function. If the accuracy increase, the loss should be decreasing. 
+
+### Hyprparameters
+* Data: batchs size. Depending on the GPU and the images.
+* Optimizer: type and learning rate (we use the gradient with respect to the loss function. Reach the minimun value of the loss function) We decreease the learning rating when the validation loss decrease.
+* Number of epochs: two posibilties:
+	* Stop training too early or too late.
+	* Traing during a lot of epochs and when the loss function stucks, stop training,
+
+Example:
+
+| bs | ot |lr |ep|
+|--|--|--|--|
+| 16 | SGD |0.01|30|
+| 32 | SGD |0.01|30|
+| 16 | Adam |0.01|30|
+| . | . |.|.|
+| . | . |.|.|
+| . | . |.|.|
+
+We use the validation accuracy or loss function.
+
