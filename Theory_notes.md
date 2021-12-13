@@ -378,3 +378,29 @@ Example:
 
 We use the validation accuracy or loss function.
 
+
+# Sesion 10
+
+## Overfitting
+
+The network fits its parameters extremely well on the training data.
+* Very high Acc on training
+* Acc starts decreasing for the validation set --> loss increases
+Poor genereralization on test data. Is a situation that we must avoid.
+
+In order to avoid this, we can:
+
+* More data:
+	* Gather more data.
+	* Data augmentation techniques (make different pertubation to an image to get more images)
+
+* Regularization
+	* New hyperparameter: drop ratio.
+	* Regularization parameter of layers.
+
+* Transfer learning
+	* Reuse layers and weights from other pretrained network.
+		* Freeze some layers and train the others
+
+Input --> CNNa --> Class(a) --> Output
+Input --> CNNa --> Class(b) --> Output
