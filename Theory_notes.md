@@ -32,7 +32,7 @@ Para diferenciar una imagen rotada(bandera que sea la misma rotada), dividimos l
 
 0  1  0
 1 -4  1
-0  1   0
+0  1   0 Jose
 
 Another way to compute this is using the difference of gaussian
 
