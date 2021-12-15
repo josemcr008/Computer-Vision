@@ -404,3 +404,57 @@ In order to avoid this, we can:
 
 Input --> CNNa --> Class(a) --> Output
 Input --> CNNa --> Class(b) --> Output
+
+
+# Sesion 11
+
+## Keypoint detection
+
+Keypoint is limite region, not a single point. This shpuld be easy to recognize and largely unique. Is defined by the x,y,s --> position and the scale.
+Important: the methpd we use must be invariant to translation and rotation.
+
+### SIFT
+
+Scale-Invariant Feature Transform
+Steps:
+
+* Pyramid of scales. (same image with different resolution)
+* Convolution with Gaussians --> variance.  
+* Computing the difference of Gaussians is a Laplacian of Gaussian filter(detect edges)
+* Selection of maxima and minma in Difference of Gaussian. Maximum value of the window/neighbours in the same image, the scale above and the scale below. Same with the minimun value.
+* Reject points of the edges and low contrast.
+* keypoint scale --> square root of the smallest variance used in this DoG.
+* Keypoint orientation --> peak in histogram of orientations of neighbour points. (1.5 x scale)
+
+
+## Descriptors
+
+Mathematical representation image regions associated to keypoits. Two types: real or binary values.
+
+Computing steps:
+
+* Split region into 16 blocks.
+* For each block, compute the histogram of gradient orientations (8 bins). Contribution of each pixel proportional to magnitude --> 128 dims.
+* Rotation wrt keypoint orientation.
+* Vector normalization.
+
+## Marching
+Finding pairs of keypoints in different images.
+Distance between descriptors.
+* Euclidean
+* Hamming (amount of bits that are different. It used if we use the binary descriptor)
+
+Classic strategy: assigning to each descriptor its Neirest Neighbour, Alternative FLANN (Fast Library for Approximate Nearest Neighbours)
+
+Pair filtering --> distance above a threshold. Reject points that are not so good.
+
+## Aplications
+
+### Object localization
+* Define the image region of a known object.
+* Idea: use the homography(transformation between two planes) to compute the position of the corners of the objects in the scene.
+
+### Stitching
+ Linking images of same scene to generate a single image (panorama)
+
+
