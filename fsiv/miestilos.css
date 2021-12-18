@@ -117,13 +117,46 @@ figure img{
   padding: 20px;
   /*background-color: #E7F1F5;*/
   background: rgb(255,255,255);
-background: linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 42%);
-  border-radius: 10px;
+  background: linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 42%);
+  border-radius: 20px;
   float: right;
 }
 
+#infoadicional a{
+  color:black;
+}
+
+#infoadicional a:hover{
+  font-size:30px;
+}
+
+
+
+#prevpag{
+  border-radius: 10px;
+  background: rgb(255,255,255);
+  background: linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 42%);
+  padding: 5px;
+  color:black;
+}
 #sigpag{
-  float:right
+
+  float:right;
+  border-radius: 40px;
+  background: rgb(255,255,255);
+  background: linear-gradient(5deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 42%);
+  padding: 5px;
+  color:black;
+}
+
+#sigpag:hover{
+  background: rgb(255,255,255);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 74%);
+}
+
+#prevpag:hover{
+  background: rgb(255,255,255);
+  background: linear-gradient(176deg, rgba(255,255,255,1) 0%, rgba(203,240,255,1) 74%);
 }
 
 /******************************************************************/

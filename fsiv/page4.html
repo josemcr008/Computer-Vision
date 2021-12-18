@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="miestilos.css">
+  </head>
+  <body>
+    <header id="cabeceralogo">
+      <div>
+        <h1>Computer Vision</h1>
+      </div>
+      </header>
+    <main>
+      <div>
+        <article id="articulosprincipales">
+
+          <h2 id="sesion9">Sesion 9</h2>
+          <h3>Training</h3>
+          <p><strong>Data batch</strong></p>
+          <p>A lot of images with specific width and height. Batch size is an hyperparameter.</p>
+          <p>Epoch: training perior where the models sees(almost) all training samples. It is an hyperparameter as well. Usually we shuffle data between epochs</p>
+          <p>We can make a graphic using the accuracy and the loss function. If the accuracy increase, the loss decrease</p>
+          <br>
+          <p><strong>Hyperparameters</strong></p>
+          <ul>
+            <li>Data: batch size. Depending on the GPU and the images.</li>
+            <li>Optimizer: type and learning rate(We use the gradient with respect to the loss function. Reach the minimun value of the loss function). We drease the learning rating when the validation loss decrease</li>
+            <li>Number of epochs: two posibilities:</li>
+            <ul style="padding-left:20px">
+              <li>Stop training to early or to late</li>
+              <li>Traing during a lot of epochs and when the loss function stucks, stop training</li>
+            </ul>
+          </ul>
+          <br>
+
+          <h2 id="sesion10">Sesion 10</h2>
+          <h3>Overfitting</h3>
+          <p>The network fits its parameters extremely well on the training data</p>
+          <ul>
+            <li>Very high Acc on training</li>
+            <li>Acc starts decreasing for the validation set --> Loss increases. Poor generalization on test data.</li>
+          </ul>
+          <p>In order to avoid this, we can:</p>
+          <ul>
+            <li>More data:</li>
+            <ul style="padding-left:20px">
+              <li>Gather more data</li>
+              <li>Data augment techniques (to make different perturbation to an image to get more images)</li>
+            </ul>
+            <li>Regularization</li>
+            <ul style="padding-left:20px">
+              <li>New hyperparameter: drop ratio</li>
+              <li>Regularization parameter of layers</li>
+            </ul>
+            <li>Transfer learning</li>
+            <ul style="padding-left:20px">
+              <li>Reuse layers and weights from other pretrained network</li>
+              <ul style="padding-left:40px">
+                <li>Freeze some layers and train the others</li>
+              </ul>
+            </ul>
+          </ul>
+          <p>Input --> CNNa --> Class(a) --> Output</p>
+          <p>Input --> CNNa --> Class(b) --> Output</p>
+<br><br>
+          <h2 id="sesion11">Sesion 11</h2>
+
+          <h3>Keypoints detection</h3>
+          <p>Keypoint is limite region, not a single point. This shpuld be easy to recognize and largely unique. Is defined by the x,y,s --> position and the scale. Important: the methpd we use must be invariant to translation and rotation.</p>
+
+          <h3>SIFT</h3>
+          <p>Steps:</p>
+          <ul>
+            <li>Pyramid of scales</li>
+            <li>Convolution with Gaussians</li>
+            <li>Computing the difference of Gaussians</li>
+            <li>Selection of Maxima and minima in Difference of Gaussian. Maximun value of the window/neighbours in the same image, tha scale above and the scale below. Same with the minumun value</li>
+            <li>Reject points of the edges and low contrast</li>
+            <li>Keypoint scale -> square root of the smallest variance used in this DoG</li>
+            <li>Keypoint orientation -> peak in histogram of orientations of neighbours points</li>
+          </ul>
+
+
+
+
+          <br>
+          <a id="prevpag" href="page3.html">Prev page</a>
+
+
+        </article>
+
+        <aside id="infoadicional">
+          <h1>Sesions</h1><br>
+          <a href="index.html">sesion 1</a><br><br>
+          <a href="index.html">sesion 2</a><br><br>
+          <a href="page1.hmtl">sesion 3</a><br><br>
+          <a href="page1.html">sesion 4</a><br><br>
+          <a href="page2.html">sesion 5</a><br><br>
+          <a href="page2.html">sesion 6</a><br><br>
+          <a href="page3.html">sesion 7</a><br><br>
+          <a href="page3.html">sesion 8</a><br><br>
+          <a href="#sesion9">sesion 9</a><br><br>
+          <a href="#sesion10">sesion 10</a><br><br>
+          <a href="#sesion11">sesion 11</a>
+
+        </aside>
+      </div>
+    </main>
+    <footer id="pielogo">
+      <div>
+        <section class="seccionpie">
+
+
+
+          <p><a href="index.html">Inicio</a></p>
+
+        </section>
+
+        <section class="seccionpie">
+          <h1>Ayuda</h1>
+          <p><a href="index.html">Contacto</a></p>
+        </section>
+
+        <section class="seccionpie">
+          <address>Universidad Politécnica Superior, UCO, Gabacholandia</address>
+          <small>&copy; Derechos Reservados pa siempre</small>
+
+        </section>
+    </footer>
+  </body>
+</html>

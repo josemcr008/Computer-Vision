@@ -15,7 +15,7 @@
       <div>
         <article id="articulosprincipales">
 
-          <h2>Sesion 7</h2>
+          <h2 id="sesion7">Sesion 7</h2>
 
           <h3>Categorization</h3>
 
@@ -77,14 +77,35 @@
 
 
 
-        <h2>Sesion 8</h2>
+        <h2 id="sesion8">Sesion 8</h2>
 
-        
+        <h3>Sequential model</h3>
+        <p>Combine the pieces. Tips</p>
+        <ul>
+          <li>Several Conv2D+MaxPool2D bocks, incremental number of filters</li>
+          <li>Some FC layers decreasing theis size</li>
+          <li>Final FC layers with softmax </li>
+          <li>Labels: one-hot vector encoding</li>
+          <li>Relation between output layer and this encoding One-hot vector. A one-hot vector is an vector wich only one position is 1 and the others are 0.</li>
+        </ul>
+        <p>The output we recieve is not perfect, for example, we obtain (0,1,0,0,0,1,0). We have to optimize that.</p>
+
+        <br>
+
+        <p>Model has to be compiled. To be set:</p>
+        <ul>
+          <li>loss: image -> output -> target. We want to minimize the loss function as much as possible. Loss is how good is out output comparing to the target</li>
+          <li>Optimizer</li>
+          <li>Metrics: we'll use Accuracy</li>
+        </ul>
+
+
+
 
 
           <br>
-          <a id="prevpag" href="page1.html">Prev page</a>
-          <a id="sigpag" href="page3.html">Next page</a>
+          <a id="prevpag" href="page2.html">Prev page</a>
+          <a id="sigpag" href="page4.html">Next page</a>
 
 
         </article>
