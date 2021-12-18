@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="miestilos.css">
+  </head>
+  <body>
+    <header id="cabeceralogo">
+      <div>
+        <h1>Computer Vision</h1>
+      </div>
+      </header>
+    <main>
+      <div>
+        <article id="articulosprincipales">
+
+          <h2 id="sesion3">Sesion 3</h2>
+          <h3> Optical flow</h3>
+          <p>A pattern of apparent motion of the object. We use it to obtain objects that are moving between two images. OF is a vector.
+          Three assumptions </p>
+          <ul>
+            <li>Brightness does not change from frame to frame</li>
+            <li>Small movements</li>
+            <li>Neighboring points belong to same surface and have similar motion</li>
+          </ul>
+
+          <code> I(x(t), t) = I (x(t+dt), t+dt) </code>
+          <p> I= intensity; x=spacial position; t=time; dt= increment of time </p>
+
+          <br>
+          <p> Two points: (2,10), (4,12). The optical flow will be: (2,10) - (4-12) = (2,2) = (u,v) </p>
+            <br>
+
+          <h2 id="sesion4">Sesion 4</h2>
+
+          <h3>Segmentation based on colors</h3>
+          <p>We need only one image. Typical green background</p>
+
+          <h3>Segmentation based on optical flow</h3>
+
+          <p>Optical flow is used to represent movement. Is used to blur the background of an image and we can use it to
+          read, for example, the movement of a person. Basic methods:</p>
+          <ol>
+            <li>Compute the optical flow between sequential frames: t-1 with 1</li>
+            <li>For each pixel, compute magnitude of optical flow</li>
+            <li>Normalize OF magnitude in [0,1]</li>
+            <li>If Mag(y,x) > T, then "(y,x) is foreground"</li>
+          </ol>
+
+          <figure>
+            <img src="of.png">
+        </figure>
+
+
+          <br>
+          <a id="prevpag" href="index.html">Prev page</a>
+          <a id="sigpag" href="page2.html">Next page</a>
+
+        </article>
+
+        <aside id="infoadicional">
+          <h1>Sesions</h1><br>
+          <a href="index.html">sesion 1</a><br><br>
+          <a href="index.html">sesion 2</a><br><br>
+          <a href="#sesion3">sesion 3</a><br><br>
+          <a href="#sesion4">sesion 4</a><br><br>
+          <a href="page2.html">sesion 5</a><br><br>
+          <a href="page2.html">sesion 6</a><br><br>
+          <a href="page3.html">sesion 7</a><br><br>
+          <a href="page3.html>sesion 8</a><br><br>
+          <a href="#sesion9">sesion 9</a><br><br>
+          <a href="#sesion10">sesion 10</a><br><br>
+          <a href="#sesion11">sesion 11</a>
+
+        </aside>
+      </div>
+    </main>
+    <footer id="pielogo">
+      <div>
+        <section class="seccionpie">
+
+
+
+          <p><a href="index.html">Inicio</a></p>
+
+        </section>
+
+        <section class="seccionpie">
+          <h1>Ayuda</h1>
+          <p><a href="index.html">Contacto</a></p>
+        </section>
+
+        <section class="seccionpie">
+          <address>Universidad Politécnica Superior, UCO, Gabacholandia</address>
+          <small>&copy; Derechos Reservados pa siempre</small>
+
+        </section>
+    </footer>
+  </body>
+</html>
